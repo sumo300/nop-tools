@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sumo.Nop.MediaTools", "Sumo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{2FC82330-4042-4E9F-82E6-A13F195018E9}"
 	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
 		GitVersion.yml = GitVersion.yml
 		README.md = README.md
 	EndProjectSection
