@@ -10,6 +10,9 @@ gitversion /updateassemblyinfo
 
 $solutionPath = Join-Path -Path $(pwd) -ChildPath "Sumo.Nop.sln"
 
+# Restore NuGet Packages
+nuget restore
+
 # Build the solution
 Invoke-MsBuild -Path $solutionPath -Params "/target:Clean;Build /property:Configuration=Release;BuildInParallel=true /verbosity:Detailed /maxcpucount" -ShowBuildOutputInCurrentWindow
 
