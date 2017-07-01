@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Security.Cryptography;
 using ManyConsole;
 using Sumo.Nop.MediaTools.Common;
@@ -16,7 +15,7 @@ namespace Sumo.Nop.MediaTools.Commands {
         private readonly ImageExportOptions _options;
 
         public ImageExport() {
-            IsCommand("ImageExport", $"Exports images from nopCommerce v{Assembly.GetEntryAssembly().GetName().Version} safely.");
+            IsCommand("ImageExport", $"Exports images from nopCommerce safely.");
 
             _options = new ImageExportOptions();
 
