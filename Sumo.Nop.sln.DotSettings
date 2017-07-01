@@ -1,0 +1,6 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=4CDEAD0954C6ED45868CE941309AAA5B/AbsolutePath/@EntryValue">C:\Git\nop-tools\Sumo.Nop.DotSettings</s:String>
+	<s:String x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=4CDEAD0954C6ED45868CE941309AAA5B/RelativePath/@EntryValue">..\Sumo.Nop.DotSettings</s:String>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/FileInjectedLayer/=4CDEAD0954C6ED45868CE941309AAA5B/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File4CDEAD0954C6ED45868CE941309AAA5B/@KeyIndexDefined">True</s:Boolean>
+	<s:Double x:Key="/Default/Environment/InjectedLayers/InjectedLayerCustomization/=File4CDEAD0954C6ED45868CE941309AAA5B/RelativePriority/@EntryValue">1</s:Double></wpf:ResourceDictionary>
