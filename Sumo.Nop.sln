@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{2FC823
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sumo.Nop.MediaTools-Core", "Sumo.Nop.MediaTools-Core\Sumo.Nop.MediaTools-Core.csproj", "{69D322E2-4724-4500-B0A5-8BF40BDF55E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{3CEABC4D-F676-4375-A322-5425CBDDDE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CEABC4D-F676-4375-A322-5425CBDDDE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CEABC4D-F676-4375-A322-5425CBDDDE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D322E2-4724-4500-B0A5-8BF40BDF55E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D322E2-4724-4500-B0A5-8BF40BDF55E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D322E2-4724-4500-B0A5-8BF40BDF55E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D322E2-4724-4500-B0A5-8BF40BDF55E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using ManyConsole;
+using MethodTimer;
 using Sumo.Nop.MediaTools.Common;
 using Sumo.Nop.MediaTools.Models;
 
@@ -24,8 +24,8 @@ namespace Sumo.Nop.MediaTools.Commands {
             HasOption<int>("store|s=", "Store ID", s => _options.StoreId = s);
         }
 
+        [Time]
         public override int Run(string[] remainingArguments) {
-            var watch = Stopwatch.StartNew();
             var outDir = _options.OutputDirectory;
 
             try {
@@ -43,16 +43,11 @@ namespace Sumo.Nop.MediaTools.Commands {
                 Console.WriteLine(e.Message);
             }
 
-            watch.Stop();
-            var t = TimeSpan.FromMilliseconds(watch.ElapsedMilliseconds);
-            var timeElapsed = $"{t.Hours:D2}h:{t.Minutes:D2}m:{t.Seconds:D2}s:{t.Milliseconds:D3}ms";
-            Console.WriteLine();
-            Console.WriteLine($"Execution time: {timeElapsed}");
-
             // Do something
             return 0;
         }
 
+        [Time]
         private void RemovePicturesFromDb(NopDbContext db) {
             var spin = new ConsoleSpinner();
             Console.Write("Removing pictures... ");
@@ -80,6 +75,7 @@ namespace Sumo.Nop.MediaTools.Commands {
             db.SaveChanges();
         }
 
+        [Time]
         private void ValidatePictureHashes(Dictionary<int, PictureHash> pictureHashes) {
             var spin = new ConsoleSpinner();
             Console.Write("Validating image hashes... ");
@@ -95,6 +91,7 @@ namespace Sumo.Nop.MediaTools.Commands {
             }
         }
 
+        [Time]
         private Dictionary<int, PictureHash> SavePicturesToDisk(IQueryable<Picture> pictures, string outDir) {
             var pictureCount = pictures.Count();
 
@@ -129,12 +126,14 @@ namespace Sumo.Nop.MediaTools.Commands {
             return imageHashes;
         }
 
+        [Time]
         private string GetHash(byte[] picturePictureBinary) {
             using (var sha1 = new SHA1CryptoServiceProvider()) {
                 return Convert.ToBase64String(sha1.ComputeHash(picturePictureBinary));
             }
         }
 
+        [Time]
         private string GetFileExtensionFromMimeType(string mimeType) {
             if (mimeType == null)
                 return null;
